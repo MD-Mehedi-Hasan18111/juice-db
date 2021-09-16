@@ -42,7 +42,7 @@ const juiceCards = (url) => {
             const div = document.createElement('div');
             div.classList.add('col');
             div.innerHTML = `
-            <div class="card p-3" style="width: 20rem;">
+            <div class="card h-100 p-3" style="width: 20rem;">
                 <img height="200px" width="200px" src="${item.strDrinkThumb}" class="card-img-top" alt="...">
                 <div class="card-body text-center">
                     <h3 class="text-danger">${item.strDrink}</h3>
@@ -113,6 +113,7 @@ const updateCart = () => {
 // clear carts function.
 const clearCarts = () => {
     document.getElementById('items').innerHTML = '';
+    document.getElementById('carts').innerHTML = '';
     orderedJuice = 0;
     document.getElementById('count').innerText = 0;
     errorMessage("bg-success", "Congratulations! Your Order has been successful. Thank You!");
